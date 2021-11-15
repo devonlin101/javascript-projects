@@ -1,65 +1,135 @@
 * {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
   box-sizing: border-box;
 }
 
 body {
+  min-height: 100vh;
+  width: 100%;
+  background: #17181c;
+}
+
+#container {
+  height: auto;
+  width: auto;
+  position: relative;
+}
+
+#header {
+  height: 400px;
+  width: 100%;
+  background: #83aa0e;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#header h2 {
+  text-align: center;
+  font-size: 40px;
+  color: #17181c;
+  margin: 45px 0;
+}
+
+#time {
+  height: 150px;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 90px;
+  /* display: none; */
+}
+
+#time h2 {
+  color: #e2e2e2;
+  font-size: 35px;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+#time h2:first-child {
+  letter-spacing: 2px;
+}
+
+#time h3 {
+  font-size: 120px;
+  line-height: 70px;
+}
+
+#textarea {
+  height: auto;
+  width: 100%;
+  position: absolute;
+  top: 400px;
+}
+
+#typingText,
+#userInput {
+  height: 350px;
+  width: 100%;
+  font-size: 25px;
+  color: #606060;
+  background: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+  position: absolute;
+  top: 0;
+  padding: 40px;
+}
+
+#userInput {
+  top: 350px;
+  color: #17181c;
+  background: #e2e2e2;
+}
+
+#userInput::placeholder {
+  color: #17181c;
+}
+
+#result {
+  height: 200px;
+  width: calc(100% - 100px);
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  margin: 0;
-  background-color: #1e0555;
-}
-
-body,
-.quote-input {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-
-.container {
-  background-color: #f0db4f;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  width: 700px;
-  max-width: 90%;
-}
-
-.timer {
   position: absolute;
-  top: 2rem;
-  font-size: 3rem;
-  color: #f0db4f;
-  font-weight: bold;
+  left: 0;
+  top: 140px;
+  display: none;
 }
 
-.quote-display {
-  margin-bottom: 1rem;
-  margin-left: calc(1rem + 2px);
-  margin-right: calc(1rem + 2px);
+#result .showResult {
+  height: 200px;
+  width: 250px;
+  display: grid;
+  place-items: center;
+  margin: 70px 120px;
 }
 
-.quote-input {
-  background-color: transparent;
-  border: 2px solid #a1922e;
-  outline: none;
-  width: 100%;
-  height: 8rem;
-  margin: auto;
-  resize: none;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  border-radius: 0.5rem;
+#result .showResult h2 {
+  font-size: 40px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #e2e2e2;
 }
 
-.quote-input:focus {
-  border-color: black;
+#result .showResult h1 {
+  line-height: 50px;
+  font-size: 60px;
 }
 
+/* Correct Class For Correct Characters */
 .correct {
-  color: green;
+  color: #83aa0e;
 }
 
+/* Incorrect Class For Incorrect Characters */
 .incorrect {
-  color: red;
-  text-decoration: underline;
+  color: #dc1414;
 }

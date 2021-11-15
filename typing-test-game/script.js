@@ -1,61 +1,97 @@
-const RANDOM_QUOTE_API_URL = "http://api.quotable.io/random";
-const quoteDisplayElement = document.getElementById("quoteDisplay");
-const quoteInputElement = document.getElementById("quoteInput");
-const timerElement = document.getElementById("timer");
+// Selecting All Tags In Html For JavaScript Word
+let time = document.querySelector("#time");
+let counter = document.querySelector("#counter");
+let start = document.querySelector("#start");
 
-quoteInputElement.addEventListener("input", () => {
-  const arrayQuote = quoteDisplayElement.querySelectorAll("span");
-  const arrayValue = quoteInputElement.value.split("");
+let result = document.querySelector("#result");
 
-  let correct = true;
-  arrayQuote.forEach((characterSpan, index) => {
-    const character = arrayValue[index];
-    if (character == null) {
-      characterSpan.classList.remove("correct");
-      characterSpan.classList.remove("incorrect");
-      correct = false;
-    } else if (character === characterSpan.innerText) {
-      characterSpan.classList.add("correct");
-      characterSpan.classList.remove("incorrect");
-    } else {
-      characterSpan.classList.remove("correct");
-      characterSpan.classList.add("incorrect");
-      correct = false;
-    }
+let words = document.querySelector("#words");
+let characters = document.querySelector("#characters");
+let error = document.querySelector("#error");
+
+let typingText = document.querySelector("#typingText");
+let userInput = document.querySelector("#userInput");
+
+//Variables For CountDown
+let timer = 0;
+let interval = null;
+
+//Variables To Store Errors , Words & Characters
+let errorCounter = 0;
+let wordsCounter = "";
+let index = 0;
+
+// Words For Speed Test
+let text = `fly relate house expert charge interview itself because job consider knowledge color low late hope significant understand business home where entire tonight want heavy such sell way employee by civil hold executive become station successful enough task exactly reflect about fear let perform term always industry spend feeling play federal performance season major buy ability evidence treat wall true like project return popular whether inside especially say size fast really activity final use strategy maintain see add explain conference school line almost economy rise various claim range imagine their central watch art right century scientist thought radio rule call administration light concern pick coach make chair suddenly information show rock pretty ready hang finally music cold join professional later though series head college building career consumer everyone sure area maybe history wear land matter save realize family plan risk compare prepare simply meet last however score rest card also bring begin movement moment material night reduce://www.youtube.com/watch?v=afK3aWZe2ko`;
+
+// disabled '#UserInput'
+userInput.disabled = true;
+
+// Start `Typing Speed Test` Game
+start.addEventListener("click", () => {
+  start.innerText = `Start Typing`; //Change Text On Click
+  userInput.disabled = false; //enabled '#UserInput
+
+  // Appending Spans
+  text.split("").forEach((characters) => {
+    let spanTxt = document.createElement("span");
+    spanTxt.innerText = characters;
+    typingText.appendChild(spanTxt);
   });
 
-  if (correct) renderNewQuote();
+  //start CountDown
+  interval = setInterval(countDown, 1000);
+  time.style.display = "grid";
+  result.style.display = "none";
+  start.style.pointerEvents = "none";
 });
 
-function getRandomQuote() {
-  return fetch(RANDOM_QUOTE_API_URL)
-    .then((response) => response.json())
-    .then((data) => data.content);
-}
+//CountDown Function
+let countDown = () => {
+  if (timer < 60) {
+    timer++;
+    counter.innerText = timer;
+  } else {
+    userInput.disabled = true; // disabled '#UserInput'
+    time.style.display = "none";
+    result.style.display = "flex"; //Display Result
 
-async function renderNewQuote() {
-  const quote = await getRandomQuote();
-  quoteDisplayElement.innerHTML = "";
-  quote.split("").forEach((character) => {
-    const characterSpan = document.createElement("span");
-    characterSpan.innerText = character;
-    quoteDisplayElement.appendChild(characterSpan);
-  });
-  quoteInputElement.value = null;
-  startTimer();
-}
+    wordsCounter = userInput.value;
+    characters.innerText = index; //total Characters
+    words.innerText = wordsCounter.split(" ").length; //total Words
+    error.innerText = errorCounter; //total errors
 
-let startTime;
-function startTimer() {
-  timerElement.innerText = 0;
-  startTime = new Date();
-  setInterval(() => {
-    timer.innerText = getTimerTime();
-  }, 1000);
-}
+    //Stop Timer
+    clearInterval(interval);
+    timer = 0; //reset Timer
+  }
+};
 
-function getTimerTime() {
-  return Math.floor((new Date() - startTime) / 1000);
-}
+//match Characters
+userInput.addEventListener("input", (e) => {
+  let userValue = userInput.value.split("");
+  // console.log(userValue);
 
-renderNewQuote();
+  let randomText = typingText.querySelectorAll("span");
+  // console.log(randomText);
+
+  //if user key will be equal to `backspace` so
+  if (e.inputType === "deleteContentBackward") {
+    index--;
+    randomText[index].classList.remove("correct");
+    randomText[index].classList.remove("incorrect");
+  }
+  //if user Key Matched So
+  else if (userValue[index] === randomText[index].innerText) {
+    randomText[index].classList.add("correct");
+    index++;
+  }
+  // if user key not matched so
+  else {
+    {
+      randomText[index].classList.add("incorrect");
+      index++;
+      errorCounter++;
+    }
+  }
+});
