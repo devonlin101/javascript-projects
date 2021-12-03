@@ -11,42 +11,43 @@
     <!-- Header Section -->
     <div id="header">
       <h1 id="typing">Typing Speed Test</h1>
-    </div>
-    <!-- Counter Section -->
-    <div id="time">
-      <h2>TIME</h2>
-      <h1 id="counter">60</h1>
-    </div>
-    <!-- Result Section -->
-    <div id="result">
-      <!-- Words Per Minute -->
-      <div class="showResult">
-        <h2>WPM</h2>
-        <h1 id="words">00</h1>
+      <!-- Counter Section -->
+      <div id="time">
+        <h2>TIME</h2>
+        <h1 id="counter">60</h1>
       </div>
+      <!-- Result Section -->
+      <div id="result">
+        <!-- Words Per Minute -->
+        <div class="showResult">
+          <h2>WPM</h2>
+          <h1 id="words">00</h1>
+        </div>
 
-      <!-- Characters Per Minute -->
-      <div class="showResult">
-        <h2>CPM</h2>
-        <h1 id="characters">00</h1>
-      </div>
+        <!-- Characters Per Minute -->
+        <div class="showResult">
+          <h2>CPM</h2>
+          <h1 id="characters">00</h1>
+        </div>
 
-      <!-- Total Errors -->
-      <div class="showResult">
-        <h2>ERRORS</h2>
-        <h1 id="error">00</h1>
+        <!-- Total Errors -->
+        <div class="showResult">
+          <h2>ERRORS</h2>
+          <h1 id="error">00</h1>
+        </div>
       </div>
     </div>
-    <!-- Main Section -->
-    <div id="input_area"></div>
-    <textarea id="userInput" rows="4" cols="50" autofocus></textarea>
-    <div id="buttonDiv">
-      <a href="#" class="myButton" id="start-game" onclick="startGame();"
-        >Start Game</a
-      >
-      <a href="#" class="myButton" id="restart-game" onclick="restartGame();"
-        >Restart Game
-      </a>
+    <div id="typing-content">
+      <!-- Main Section -->
+      <div id="input_area"></div>
+      <textarea
+        id="userInput"
+        rows="4"
+        cols="50"
+        placeholder="click here to start typing"
+        autofocus
+      ></textarea>
+      <a href="#" class="myButton" onclick="restartGame();">Restart Game </a>
     </div>
   </body>
 </html>

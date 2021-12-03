@@ -6,9 +6,6 @@
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   min-height: 100vh;
   width: 100%;
   background: #83aa0e;
@@ -17,31 +14,29 @@ body {
 #header {
   text-align: center;
   top: 0;
+  display: flex;
+  flex-direction: column;
   width: 100vw;
-  height: 8rem;
 }
 #typing {
   font-size: 3rem;
   padding: 2rem;
 }
-#time,
-#userInput {
-  display: none;
+#time {
+  margin: 1rem;
+  width: 100vw;
+  text-align: center;
 }
 #time h2 {
   color: #e2e2e2;
-  font-size: 2.4rem;
-  padding: 1rem;
-  text-align: center;
+  font-size: 2.3rem;
 }
 #counter {
-  font-size: 4.5rem;
-  text-align: center;
+  font-size: 4.3rem;
 }
 
 #result {
   width: 100%;
-  height: 10rem;
   justify-content: center;
   display: none;
 }
@@ -50,7 +45,6 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 1rem;
   padding: 1.2rem;
 }
 
@@ -67,24 +61,37 @@ body {
   font-size: 60px;
 }
 
+#typing-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 #input_area {
-  position: relative;
   background: #17181c;
   width: 100vw;
   margin-top: 2rem;
   padding: 2rem;
-  height: 29rem;
+  height: 26rem;
   overflow: scroll;
   line-height: 2rem;
   font-size: 2.5rem;
-  display: none;
 }
 #input_area::-webkit-scrollbar {
   display: none;
 }
+#userInput {
+  margin: 1rem;
+  outline: none;
+  border-radius: 1rem;
+  width: 90vw;
+  padding: 1rem;
+}
 /* Correct Class For Correct Characters */
 .correct {
   color: #83aa0e;
+}
+.cursor {
+  cursor: none;
 }
 
 /* Incorrect Class For Incorrect Characters */
@@ -108,6 +115,9 @@ span {
   padding: 16px 31px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #2f6627;
+  margin: 2rem;
+  display: none;
+  text-align: center;
 }
 .myButton:hover {
   background-color: #5cbf2a;
@@ -115,12 +125,4 @@ span {
 .myButton:active {
   position: relative;
   top: 1px;
-}
-#buttonDiv {
-  display: grid;
-  place-items: center;
-}
-#restart-game {
-  margin: 2rem;
-  display: none;
 }
