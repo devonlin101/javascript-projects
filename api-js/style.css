@@ -82,7 +82,7 @@ input:focus {
 }
 
 .repo {
-  background-color: #666;
+  background-color: #000;
   border-radius: 5px;
   display: inline-block;
   color: white;
