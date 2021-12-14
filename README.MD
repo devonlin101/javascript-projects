@@ -1,6 +1,7 @@
 <h2>Vanilla Javascript Projects repository</h2>
 note: some of these projects are still under development.
-
+<br/>
+<br/>
   preview: <a href='https://devonlin101.github.io/javascript-projects/images/portfolio.png'>portfolio website</a><br/>
 demo: <a href='https://devonlin101.github.io/javascript-projects/portfolio-js/'>portfolio</a><br/>
 tech stacks: html, css, javascript, fontawesome, iconify, google fonts<br/>
@@ -30,15 +31,15 @@ demo: <a href='https://devonlin101.github.io/javascript-projects/speak-text-js/'
 tech stacks: html, css, javascript, bootstrap 5, jquery<br/>
 
   preview: <a href='https://devonlin101.github.io/javascript-projects/images/texttospeech.png'>text to speech</a><br/>
-demo: <a href='https://devonlin101.github.io/javascript-projects/text-to-speech-js/'>text to speech app</a>
+demo: <a href='https://devonlin101.github.io/javascript-projects/text-to-speech-js/'>text to speech app</a><br/>
 tech stacks: html, javascript, bootstrap 5<br/>
 
   preview: <a href='https://devonlin101.github.io/javascript-projects/images/typingspeedtest.png'>typing speed test</a><br/>
-demo: <a href='https://devonlin101.github.io/javascript-projects/typing-test-js/'>typing speed test app</a>
+demo: <a href='https://devonlin101.github.io/javascript-projects/typing-test-js/'>typing speed test app</a><br/>
 tech stacks: html, css, javascript<br/>
 
   preview: <a href='https://devonlin101.github.io/javascript-projects/images/videoplayer.png'>custom video player</a><br/>
-demo: <a href='https://devonlin101.github.io/javascript-projects/video-player-js/'>custom video player app</a>
+demo: <a href='https://devonlin101.github.io/javascript-projects/video-player-js/'>custom video player app</a><br/>
 tech stacks: pugjs, scss, javascript <br/>
 
   preview: <a href='https://devonlin101.github.io/javascript-projects/images/virtualkeyboard.png'>virtual keyboard</a><br/>
