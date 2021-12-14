@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
     <title>Portfolio</title>
@@ -10,16 +16,16 @@
   <body>
     <div class="tab-container">
       <ul class="tabs clearfix">
-        <li class="active">
+        <li class="active" id="home">
           <a href="#">HOME</a>
         </li>
-        <li>
+        <li id="about">
           <a href="#">ABOUT</a>
         </li>
-        <li>
+        <li id="projects">
           <a href="#">PROJECTS</a>
         </li>
-        <li>
+        <li id="contact">
           <a href="#">CONTACT</a>
         </li>
       </ul>
@@ -28,7 +34,7 @@
           <a
             href="https://my.indeed.com/resume"
             target="_blank"
-            style="color: red"
+            style="color: #fff"
             ><span class="iconify" data-icon="cib:indeed"></span
           ></a>
         </li>
@@ -36,7 +42,7 @@
           <a
             href="https://leetcode.com/devonlin/"
             target="_blank"
-            style="color: yellow"
+            style="color: #fff"
             ><span class="iconify" data-icon="simple-icons:leetcode"></span
           ></a>
         </li>
@@ -44,13 +50,28 @@
           <a
             href="https://github.com/devonlin101"
             target="_blank"
-            style="color: green"
+            style="color: #fff"
             ><span class="iconify" data-icon="akar-icons:github-fill"></span
           ></a>
         </li>
       </ul>
     </div>
-    <div class="content"></div>
+    <div class="content">
+
+      <div class='portfolio'><img src='./devonlin.jpeg' width='150' height='150' /><h1>Kevin Lin</h1><h4>web developer</h4>
+          <div class='tech-stack'><span class="iconify" data-icon="vscode-icons:file-type-html"></span><span class="iconify" data-icon="vscode-icons:file-type-pug"></span><span class="iconify" data-icon="vscode-icons:file-type-css"></span><span class="iconify" data-icon="logos:sass"></span><span class="iconify" data-icon="logos:javascript"></span><span class="iconify" data-icon="logos:typescript-icon"></span><span class="iconify" data-icon="logos:react"></span><span class="iconify" data-icon="logos:vue"></span><span class="iconify" data-icon="logos:neovim"></span><span class="iconify" data-icon="vscode-icons:folder-type-mongodb-opened"></span><span class="iconify" data-icon="logos:mysql"></span><span class="iconify" data-icon="logos:firebase"></span><span class="iconify" data-icon="flat-color-icons:linux"></span><span class="iconify" data-icon="bi:git"></span><span class="iconify" data-icon="logos:bash-icon"></span><span class="iconify" data-icon="logos:nodejs"></span><span class="iconify" data-icon="logos:rust"></span><span class="iconify" data-icon="cib:hackerrank"></span><span class="iconify" data-icon="logos:webassembly"></span>
+          </div><div class="direct-contact-container">
+
+        <ul class="contact-list">
+          
+          <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#" title="Send me an email">devonlin101@gmail.com</a></span></i></li>
+          <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:1-210-956-3666" title="Give me a call">(210) 956-3666</a></span></i></li>
+          <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Harrisburg, PA</span></i></li>
+        </ul></div>
+
+	 <footer><p>all copyright &copy; dl101 llc</p></footer>
+			 
+    </div>
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
   </body>
 </html>

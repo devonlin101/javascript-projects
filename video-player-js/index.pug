@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel='stylesheet' href='./styles.css')
+    script(src='./script.js' defer)
+    title Custom Video Player
+  body
+    .player
+      .player__loader: .spinner
+        .bounce1
+        .bounce2
+        .bounce3
+      video.player__video(src='https://player.vimeo.com/external/194837908.sd.mp4?s=c350076905b78c67f74d7ee39fdb4fef01d12420&profile_id=164', autoplay)
+      .player__controls
+        button.player__toggle
+        .player__range
+          i.material-icons volume_up
+          input.player__range-input(type='range', name='volume', min='0', max='1', step='0.05', value='1')
+        .player__range
+          i.material-icons slow_motion_video
+          input.player__range-input(type='range', name='playbackRate', min='0.5', max='2', step='0.1', value='1')
+        button.player__button(data-skip='-10'): i.material-icons replay_10
+        button.player__button(data-skip='30'): i.material-icons forward_30
+        .player__times
+          span.player__times--current 0:00
+          span  / 
+          span.player__times--duration 0:00
+        .player__progress
