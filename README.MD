@@ -11,8 +11,8 @@ demo: <a href='https://devonlin101.github.io/javascript-projects/crud-js/'>simpl
 tech stacks: html, javascript, bootstrap 5<br/>
 <br/>
  preview: <a href='https://devonlin101.github.io/javascript-projects/images/apijs.png'>github api search</a><br/>
-tech stacks: html, css, javascript <br />
 demo: <a href='https://devonlin101.github.io/javascript-projects/api-js/'>github api search</a><br/>
+tech stacks: html, css, javascript <br />
 <br/>
   preview:<a href='https://devonlin101.github.io/javascript-projects/images/covid19.png'>covid 19 tracker</a><br/>
 demo: <a href='https://devonlin101.github.io/javascript-projects/covid19-tracker-js/'>covid 19 tracker</a><br/>
