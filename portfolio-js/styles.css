@@ -1,26 +1,66 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
 @import url("https://fonts.googleapis.com/css2?family=Corinthia&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Open+Sans:wght@400;700&family=Roboto&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  font: 0.8em sans-serif;
+  font: 0.8em;
+  font-family: "Open Sans", sans-serif;
   overflow: hidden;
   width: 100vw;
   height: 100vh;
 }
-/*portfolio page styles*/
-.portfolio {
-  height: 100vh;
+
+/* tab bar styles */
+.tab-container {
+  background: #2ba6cb;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 2.2rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 1rem;
-  padding: 1rem;
+  justify-content: space-between;
 }
+.social {
+  display: flex;
+}
+.social > li {
+  font-size: 1.25rem;
+  margin: auto 0.4rem;
+  padding: auto;
+  list-style-type: none;
+  border-radius: 50%;
+}
+
+/* tab contents styles */
+.tabcontent {
+  display: none;
+  animation: fadeEffect 1s;
+  -webkit-animation: fadeEffect 1s;
+}
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*portfolio page styles*/
 .pic {
   border-radius: 50%;
   margin: 1rem;
@@ -108,12 +148,6 @@ textarea:valid ~ label {
   border-radius: 4px;
 }
 
-@media only screen and (max-width: 768px) {
-  .styled-input {
-    width: 100%;
-  }
-}
-
 .styled-input label {
   color: #999;
   font-size: 1.2rem;
@@ -166,7 +200,8 @@ textarea {
 }
 
 .submit-btn {
-  float: right;
+  margin-left: 28rem;
+  margin-top: 1.5rem;
   padding: 7px 35px;
   border-radius: 60px;
   display: inline-block;
@@ -184,14 +219,6 @@ textarea {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.09);
 }
 
-@media (max-width: 768px) {
-  .submit-btn {
-    width: 100%;
-    float: none;
-    text-align: center;
-  }
-}
-
 input[type="checkbox"] + label {
   color: #ccc;
   font-style: italic;
@@ -200,25 +227,6 @@ input[type="checkbox"] + label {
 input[type="checkbox"]:checked + label {
   color: #f00;
   font-style: normal;
-}
-.tab-container {
-  background: #2ba6cb;
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  max-height: 35px;
-  display: flex;
-  justify-content: space-between;
-}
-.social {
-  display: flex;
-}
-.social > li {
-  font-size: 1.2rem;
-  margin: auto 0.5rem;
-  padding: 0.5rem auto;
-  list-style-type: none;
-  border-radius: 50%;
 }
 
 ul.tabs {
@@ -286,12 +294,14 @@ ul.tabs > li:after {
 
 ul.tabs > li:before {
   border-color: transparent #ddd transparent transparent;
+  transform: rotate(48deg);
   -webkit-transform: rotate(48deg);
   left: -23px;
 }
 
 ul.tabs > li:after {
   border-color: transparent transparent transparent #ddd;
+  transform: rotate(-48deg);
   -webkit-transform: rotate(-48deg);
   right: -17px;
 }
@@ -419,4 +429,25 @@ footer {
 }
 .pcontainer {
   display: flex;
+}
+footer {
+  width: 100vw;
+  text-align: center;
+  color: #545d7a;
+}
+/*projects-container {*/
+/*display: none;*/
+/*}*/
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media only screen and (max-width: 768px) {
+  .styled-input {
+    width: 100%;
+  }
+  .submit-btn {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
 }
