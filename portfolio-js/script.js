@@ -19,10 +19,22 @@ function changetab(evt, cityName) {
   }
 
   // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(cityName).style.display = "block";
+  document.getElementById(cityName).style.display = "flex";
   evt.currentTarget.className += " active";
 }
 
+const list = document.querySelectorAll(".list");
+const tabcontent = document.getElementsByClassName("tabcontent");
+function activeLink(evt, cityName) {
+  list.forEach((item) => item.classList.remove("active"));
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  document.getElementById(cityName).style.display = "flex";
+  evt.currentTarget.className += " active";
+  this.classList.add("active");
+}
+// list.forEach((item) => item.addEventListener("click", activeLink));
 // tabs.forEach((tab) =>
 //   tab.addEventListener("click", () => {
 //     for (i = 0; i < tabs.length; i++) {
