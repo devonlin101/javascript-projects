@@ -317,35 +317,45 @@
       <div class="row">
         <h4 style="text-align: center">We'd love to hear from you!</h4>
       </div>
-      <div class="row input-container">
+      <form
+        action="https://formsubmit.co/el/bosipi"
+        method="POST"
+        class="row input-container contact-form"
+        enctype="multipart/form-data"
+      >
         <div class="col-xs-12">
           <div class="styled-input wide">
-            <input type="text" required />
+            <input type="text" id="name" name="name" required />
             <label>Name</label>
           </div>
         </div>
         <div class="col-md-6 col-sm-12">
           <div class="styled-input">
-            <input type="text" required />
+            <input type="email" id="email" name="email" required />
             <label>Email</label>
           </div>
         </div>
         <div class="col-md-6 col-sm-12">
           <div class="styled-input" style="float: right">
-            <input type="text" required />
+            <input type="tel" id="phonenumber" name="phonenumber" required />
             <label>Phone Number</label>
           </div>
         </div>
         <div class="col-xs-12">
           <div class="styled-input wide">
-            <textarea required></textarea>
+            <textarea
+              type="text"
+              id="message"
+              name="message"
+              required
+            ></textarea>
             <label>Message</label>
           </div>
         </div>
         <div class="col-xs-12">
-          <div class="btn-lrg submit-btn">Send Message</div>
+          <button type="submit" class="btn-lrg submit-btn">Send Message</button>
         </div>
-      </div>
+      </form>
     </div>
     <div class="footer">
       <footer>all copyright &copy; dl101 llc</footer>

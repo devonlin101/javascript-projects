@@ -45,6 +45,10 @@ body {
   animation: fadeEffect 1s;
   -webkit-animation: fadeEffect 1s;
 }
+button {
+  border: none;
+  outline: none;
+}
 /* Fade in tabs */
 @-webkit-keyframes fadeEffect {
   from {
@@ -185,7 +189,6 @@ textarea {
   width: 100%;
   font-size: 1rem;
   background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
-  color: white;
   border-radius: 4px;
 }
 
@@ -579,6 +582,7 @@ footer {
 @media only screen and (max-width: 768px) {
   .tab-container {
     height: 4.5rem;
+    width: 100vw;
   }
   .navbar {
     display: none;

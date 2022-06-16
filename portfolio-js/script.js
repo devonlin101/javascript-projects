@@ -32,8 +32,48 @@ function activeLink(evt, cityName) {
   }
   document.getElementById(cityName).style.display = "flex";
   evt.currentTarget.className += " active";
-  this.classList.add("active");
+  evt.currentTarget.classList.add("active");
 }
+
+// const contactForm = document.querySelector(".contact-form");
+// let name = document.getElementById("name");
+// let email = document.getElementById("email");
+// let phonenumber = document.getElementById("phonenumber");
+// let message = document.getElementById("message");
+// contactForm.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   console.log("submit clicked successfully");
+//   let FormData = {
+//     name: name.value,
+//     email.email.value,
+//     phonenumber: phonenumber.value,
+//     message: message.value
+//   }
+//   let mail = new FormData(contactForm)
+//   sendMail(mail)
+// });
+//
+// const sendMail = mail =>{
+//   fetch('/send', {
+//     method: 'post',
+//     body: mail,
+//   }).then(response=>{
+//       return response.json()
+//     })
+// }
+//
+//
+// const transporter = nodemailer.createTransport({host:'smtp.gmail.com',port: 587, auth:{
+//   user:process.env.EMAIL,
+//   pass: process.env.PASS
+// }})
+// transporter.verify(function (error, success){
+//   if(error){
+//     console.log(error)
+//   }else{
+// console.log('server is ready to take our messages')
+//   }
+// })
 // list.forEach((item) => item.addEventListener("click", activeLink));
 // tabs.forEach((tab) =>
 //   tab.addEventListener("click", () => {
