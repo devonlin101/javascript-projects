@@ -35,6 +35,30 @@ function activeLink(evt, cityName) {
   evt.currentTarget.classList.add("active");
 }
 
+// CHECK IF BROWSER SUPPORTS GEOLOCATION
+if ("geolocation" in navigator) {
+  // check if geolocation is supported/enabled on current browser
+  navigator.geolocation.getCurrentPosition(
+    function success(position) {
+      // for when getting location is a success
+      console.log(
+        "latitude",
+        position.coords.latitude,
+        "longitude",
+        position.coords.longitude
+      );
+    },
+    function error(err) {
+      // for when getting location results in an error
+      console.error("An error has occured while retrieving location", err);
+    }
+  );
+} else {
+  // geolocation is not supported
+  // get your location some other way
+  console.log("geolocation is not enabled on this browser");
+}
+
 // const contactForm = document.querySelector(".contact-form");
 // let name = document.getElementById("name");
 // let email = document.getElementById("email");
