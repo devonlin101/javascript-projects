@@ -3,7 +3,7 @@
 note: some of these projects are still under development.
 
 
-- demo: [portfolio](https://devonlin101.github.io/javascript-projects/portfolio-js/')<br/>
+- demo: [portfolio](https://devonlin101.github.io/javascript-projects/portfolio-js/)<br/>
 tech implemented: html, css, javascript, fontawesome, iconify, google fonts
 
 - demo: [simple javascript crud](https://devonlin101.github.io/javascript-projects/crud-js/)<br/>
@@ -12,7 +12,7 @@ tech implemented: html, javascript, bootstrap 5
 - demo: [github api search](https://devonlin101.github.io/javascript-projects/api-js/)<br/>
 tech implemented: html, css, javascript
 
-- demo: [covid 19 tracker](https://devonlin101.github.io/javascript-projects/covid19-tracker-js/')<br/>
+- demo: [covid 19 tracker](https://devonlin101.github.io/javascript-projects/covid19-tracker-js/)<br/>
 tech implemented: html, css, javascript, chart.js
 
 - demo: [custom music player](https://devonlin101.github.io/javascript-projects/music-player-js/)<br/>
