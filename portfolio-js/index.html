@@ -18,7 +18,7 @@
     ></script>
     <title>Portfolio-Kevin Lin</title>
   </head>
-  <body>
+  <body onload="checkCookie()">
     <div class="tab tab-container">
       <div class="navbar">
         <ul class="tabs clearfix">
@@ -123,55 +123,89 @@
       <h1>Kevin Lin</h1>
       <h4>web developer</h4>
       <div class="tech-stack">
-        <a
-          href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics"
-          ><span
-            class="iconify"
-            data-icon="vscode-icons:file-type-html"
-          ></span></a
-        ><a href="https://www.markdownguide.org/"
-          ><span class="iconify" data-icon="bi:markdown"></span></a
-        ><a href="https://developer.mozilla.org/en-US/docs/Web/CSS"
-          ><span
-            class="iconify"
-            data-icon="vscode-icons:file-type-css"
-          ></span></a
-        ><a href="https://sass-lang.com/"
-          ><span class="iconify" data-icon="logos:sass"></span></a
-        ><a href="https://www.javascript.com/"
-          ><span class="iconify" data-icon="logos:javascript"></span></a
-        ><a href="https://www.typescriptlang.org/"
-          ><span class="iconify" data-icon="logos:typescript-icon"></span></a
-        ><a href="https://reactjs.org/"
-          ><span class="iconify" data-icon="logos:react"></span></a
-        ><a href="https://nextjs.org/"
-          ><span class="iconify" data-icon="akar-icons:nextjs-fill"></span></a
-        ><a href="https://vuejs.org/"
-          ><span class="iconify" data-icon="logos:vue"></span></a
-        ><a href="https://www.prisma.io/"
-          ><span class="iconify" data-icon="file-icons:prisma"></span></a
-        ><a href="https://www.mongodb.com/"
-          ><span
-            class="iconify"
-            data-icon="vscode-icons:folder-type-mongodb-opened"
-          ></span></a
-        ><a href="https://www.mysql.com/"
-          ><span class="iconify" data-icon="logos:mysql"></span></a
-        ><a href="https://firebase.google.com/"
-          ><span class="iconify" data-icon="logos:firebase"></span></a
-        ><a href="https://www.linux.org/"
-          ><span class="iconify" data-icon="flat-color-icons:linux"></span></a
-        ><a href="https://git-scm.com/"
-          ><span class="iconify" data-icon="bi:git"></span></a
-        ><a href="https://www.tutorialspoint.com/unix/shell_scripting.htm"
-          ><span class="iconify" data-icon="logos:bash-icon"></span></a
-        ><a href="https://nodejs.org/en/"
-          ><span class="iconify" data-icon="logos:nodejs"></span></a
-        ><a href="https://www.rust-lang.org/learn"
-          ><span class="iconify" data-icon="logos:rust"></span></a
-        ><a href="https://webassembly.org/"
-          ><span class="iconify" data-icon="logos:webassembly"></span
-        ></a>
+        <abbr title="HTML5"
+          ><a
+            href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics"
+            ><span
+              class="iconify"
+              data-icon="vscode-icons:file-type-html"
+            ></span></a></abbr
+        ><abbr title="markdown"
+          ><a href="https://www.markdownguide.org/"
+            ><span class="iconify" data-icon="bi:markdown"></span></a></abbr
+        ><abbr title="css3"
+          ><a href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+            ><span
+              class="iconify"
+              data-icon="vscode-icons:file-type-css"
+            ></span></a></abbr
+        ><abbr title="sass"
+          ><a href="https://sass-lang.com/"
+            ><span class="iconify" data-icon="logos:sass"></span></a></abbr
+        ><abbr title="javascript"
+          ><a href="https://www.javascript.com/"
+            ><span
+              class="iconify"
+              data-icon="logos:javascript"
+            ></span></a></abbr
+        ><abbr title="typescript"
+          ><a href="https://www.typescriptlang.org/"
+            ><span
+              class="iconify"
+              data-icon="logos:typescript-icon"
+            ></span></a></abbr
+        ><abbr title="reactjs"
+          ><a href="https://reactjs.org/"
+            ><span class="iconify" data-icon="logos:react"></span></a></abbr
+        ><abbr title="nextjs"
+          ><a href="https://nextjs.org/"
+            ><span
+              class="iconify"
+              data-icon="akar-icons:nextjs-fill"
+            ></span></a></abbr
+        ><abbr title="vuejs"
+          ><a href="https://vuejs.org/"
+            ><span class="iconify" data-icon="logos:vue"></span></a></abbr
+        ><abbr title="prisma ORM"
+          ><a href="https://www.prisma.io/"
+            ><span
+              class="iconify"
+              data-icon="file-icons:prisma"
+            ></span></a></abbr
+        ><abbr title="mongodb database"
+          ><a href="https://www.mongodb.com/"
+            ><span
+              class="iconify"
+              data-icon="vscode-icons:folder-type-mongodb-opened"
+            ></span></a></abbr
+        ><abbr title="mysql database"
+          ><a href="https://www.mysql.com/"
+            ><span class="iconify" data-icon="logos:mysql"></span></a></abbr
+        ><abbr title="firebase database"
+          ><a href="https://firebase.google.com/"
+            ><span class="iconify" data-icon="logos:firebase"></span></a></abbr
+        ><abbr title="linux os"
+          ><a href="https://www.linux.org/"
+            ><span
+              class="iconify"
+              data-icon="flat-color-icons:linux"
+            ></span></a></abbr
+        ><abbr title="git version control"
+          ><a href="https://git-scm.com/"
+            ><span class="iconify" data-icon="bi:git"></span></a></abbr
+        ><abbr title="bash script"
+          ><a href="https://www.tutorialspoint.com/unix/shell_scripting.htm"
+            ><span class="iconify" data-icon="logos:bash-icon"></span></a></abbr
+        ><abbr title="nodejs-javaScript rumtime"
+          ><a href="https://nodejs.org/en/"
+            ><span class="iconify" data-icon="logos:nodejs"></span></a></abbr
+        ><abbr title="rust programming language"
+          ><a href="https://www.rust-lang.org/learn"
+            ><span class="iconify" data-icon="logos:rust"></span></a></abbr
+        ><abbr title="webassembly"
+          ><a href="https://webassembly.org/"
+            ><span class="iconify" data-icon="logos:webassembly"></span></a
+        ></abbr>
       </div>
       <div class="direct-contact-container">
         <ul class="contact-list">
